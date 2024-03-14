@@ -32,6 +32,7 @@ See the full blog post with the original instructions at [Debricked](https://deb
   * Containers are networked with manual IP addressing.
 
 ## KNOWN ISSUES
+
 * Some of the Dockerfile steps to add customisations to the Grafana interface break the build process when using Synology versions of Docker (called Container Manager). I have not been able to replicate this issue on macOS or Ubuntu using the same versions of Docker, and I do not have Synology to test on. To resolve this you will need to comment out lines 27-29, 72-77 and 89-91 in `grafana/Dockerfile`. (Issue reported, and workaround found, by supaeasy @ [#1](https://github.com/LukeCallaghan/dmarc-visualizer/issues/1#issuecomment-1872215466), cheers!)
 
 ## Instructions
