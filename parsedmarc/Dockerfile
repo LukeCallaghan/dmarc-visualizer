@@ -5,6 +5,7 @@ RUN apk add --update --no-cache --virtual .build_deps build-base libffi-dev \
     && pip install parsedmarc \
     && apk del .build_deps
 
+COPY sample_reports/ /input/
 COPY parsedmarc.ini /
 
 ## Set up geoipudate for automatic updates
