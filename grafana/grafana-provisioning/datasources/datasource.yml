@@ -10,7 +10,7 @@ datasources:
     isDefault: true
     jsonData:
       index: "[dmarc_aggregate-]YYYY-MM-DD"
-      esVersion: 8.11.0
+      esVersion: 8.18.0
       timeField: "date_range"
       interval: "Daily"
     version: 1
@@ -24,7 +24,7 @@ datasources:
     isDefault: false
     jsonData:
       index: "[dmarc_forensic-]YYYY-MM-DD"
-      esVersion: 8.11.0
+      esVersion: 8.18.0
       timeField: "arrival_date"
       interval: "Daily"
     version: 1
