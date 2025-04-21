@@ -17,19 +17,20 @@ See the full blog post with the original instructions at [Debricked](https://deb
   * Delayed start by waiting for Elasticsearch to report service healthy.
 
 * Grafana
-  * Updated to recent release version - 10.1.5 (Upgrades to 10.2.x are causing errors that are yet to be resolved).
+  * Updated to recent release version - 11.6.0 (Upgrades to 10.2.x are causing errors that are yet to be resolved - THIS IS NOT CONFIRMED IN 11.6.0 YET).
   * Uses a docker volume for data persistence.
   * Delayed start by waiting for Elasticsearch to report service healthy.
   * grafana-piechart-panel plugin is deprecated so has been removed and panel converted to the new builtin Piechart.
   * grafana-worldmap-panel plugin is deprecated so has been removed and panel converted to the new builtin Geomap.
 
 * Elasticsearch
-  * Updated to current release version - 8.11.0.
+  * Updated to current release version - 8.18.0.
   * Uses a docker volume for data persistence.
   * Runs health check to report service healthy, forcing other containers to wait until initialised.
 
 * Other
   * Containers are networked with manual IP addressing.
+  * Added sample files for testing functionality without needing to connect to an actual mailbox.
 
 ## KNOWN ISSUES
 
@@ -55,6 +56,8 @@ Configuration options are available for each of the services.
 ### parsedmarc
 
 parsedmarc can be configured in the parsedmarc.ini file. There are common options included in the file already.
+
+PARSEDMARC NOW RUNS IN OFFLINE MODE BY DEFAULT - THIS MUST BE COMMENTED IN THE CONFIG TO BE ONLINE.
 
 For a full list of options and information about their use, please visit the [config section of the parsedmarc documentation](https://domainaware.github.io/parsedmarc/usage.html#configuration-file)
 
