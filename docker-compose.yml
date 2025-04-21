@@ -1,4 +1,3 @@
-version: '3.5'
 volumes:
   elasticsearch_data:
     driver: local
@@ -28,7 +27,7 @@ services:
         condition: service_healthy
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.18.0
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data:rw
     expose:
